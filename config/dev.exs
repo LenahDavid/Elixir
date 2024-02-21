@@ -5,7 +5,7 @@ config :trial, Trial.Repo,
   username: "postgres",
   password: "password",
   hostname: "localhost",
-  database: "trial",
+  database: "trial_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10

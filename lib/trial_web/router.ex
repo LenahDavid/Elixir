@@ -18,6 +18,13 @@ defmodule TrialWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/users",PageController, :users
+  end
+
+  scope "/api",TrialWeb do
+pipe_through :api
+    resources "/posts", PostController, except: [:new, :edit]
+    resources "/users", UserController, except: [:new, :edit]
   end
 
   # Other scopes may use custom stacks.
